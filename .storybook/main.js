@@ -9,17 +9,6 @@ module.exports = {
 		"@storybook/addon-interactions",
 		"@storybook/preset-create-react-app",
 		"@storybook/addon-measure",
-		{
-			name: "@storybook/addon-postcss",
-			options: {
-				cssLoaderOptions: {
-					importLoaders: 1,
-				},
-				postcssLoaderOptions: {
-					implementation: require("postcss"),
-				},
-			},
-		},
 	],
 	framework: "@storybook/react",
 	core: {

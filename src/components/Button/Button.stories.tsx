@@ -13,4 +13,5 @@ Small.args = {
 	label: "Small",
 	size: ButtonSize.sm,
 	disabled: true,
+	loading: true,
 };
