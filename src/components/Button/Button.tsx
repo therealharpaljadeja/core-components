@@ -1,7 +1,6 @@
 import "./Button.css";
 import React, { ButtonHTMLAttributes, ReactNode } from "react";
 import clsx from "clsx";
-import Spinner, { SpinnerVariant } from "../Spinner/Spinner";
 
 export enum ButtonVariant {
 	Primary = "Primary",
@@ -48,7 +47,7 @@ const Button = ({
 					"px-5 py-2.5": size === ButtonSize.lg,
 					"px-5 py-3": size === ButtonSize.xl,
 					"px-7 py-4": size === ButtonSize.xxl,
-					"bg-primary-600 text-base-white border-2 border-primary-600 drop-shadow-[0px_0px_4px_#F4EBFF] hover:bg-primary-700 hover:border-primary-700 focus:ring-primary-200 ":
+					"bg-primary-600 text-base-white border-2 border-primary-600 drop-shadow-[0px_0px_4px_#F4EBFF] hover:bg-primary-700 hover:border-primary-700 focus:ring-primary-200":
 						variant === ButtonVariant.Primary,
 					"bg-primary-200 border-primary-200 hover:bg-primary-200 hover:border-primary-200":
 						variant === ButtonVariant.Primary &&
@@ -79,10 +78,11 @@ const Button = ({
 						variant === ButtonVariant.Error &&
 						(disabled || loading),
 				},
-				"font-body",
+				"font-display",
 				"disabled:drop-shadow-[0px_0px_2px_rgba(16, 24, 40, 0.05)]",
 				"focus:ring-offset-0 focus:ring-4 focus:ring-opacity-100",
 				"rounded-lg",
+				"flex space-x-3 items-center",
 				className
 			)}
 			disabled={disabled}>

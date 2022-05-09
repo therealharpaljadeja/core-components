@@ -35,26 +35,23 @@ const Spinner = ({
 					"border-success-100": variant === SpinnerVariant.Success,
 					"border-warning-100": variant === SpinnerVariant.Warning,
 					"border-error-100": variant === SpinnerVariant.Error,
-					"h-7 w-7 border-2": size === SpinnerSize.sm,
-					"h-11 w-11 border-[6px]": size === SpinnerSize.md,
-					"h-12 w-12 border-[6px]": size === SpinnerSize.lg,
-					"h-14 w-14 border-8": size === SpinnerSize.xl,
+					"h-7 w-7": size === SpinnerSize.sm,
+					"h-11 w-11": size === SpinnerSize.md,
+					"h-12 w-12": size === SpinnerSize.lg,
+					"h-14 w-14": size === SpinnerSize.xl,
 				},
 				"relative",
+				"border-2",
 				"p-0 m-0",
 				"rounded-full"
 			)}>
 			<span
 				className={clsx(
 					{
-						"h-7 w-7 border-2 left-[-2px] top-[-2px]":
-							size === SpinnerSize.sm,
-						"h-11 w-11 border-[6px] left-[-6px] top-[-6px]":
-							size === SpinnerSize.md,
-						"h-12 w-12 border-[6px] left-[-6px] top-[-6px]":
-							size === SpinnerSize.lg,
-						"h-14 w-14 border-8 left-[-8px] top-[-8px]":
-							size === SpinnerSize.xl,
+						"h-7 w-7": size === SpinnerSize.sm,
+						"h-11 w-11": size === SpinnerSize.md,
+						"h-12 w-12": size === SpinnerSize.lg,
+						"h-14 w-14": size === SpinnerSize.xl,
 						"border-t-primary-600":
 							variant === SpinnerVariant.Primary,
 						"border-t-base-black":
@@ -67,7 +64,8 @@ const Spinner = ({
 					},
 					"border-[transparent] animate-spin ",
 					"absolute box-border ",
-					"rounded-full"
+					"rounded-full",
+					"border-2 left-[-2px] top-[-2px]"
 				)}></span>
 		</div>
 	);
