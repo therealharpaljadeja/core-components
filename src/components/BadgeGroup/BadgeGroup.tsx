@@ -29,7 +29,7 @@ const BadgeGroup = ({
 					"bg-warning-50": variant === BadgeVariant.Warning,
 					"bg-success-50": variant === BadgeVariant.Success,
 				},
-				"pl-1 pr-[10px] py-1 rounded-[16px] inline-flex space-x-[8px] items-center font-display"
+				"pl-1 pr-[14px] py-1 rounded-[16px] inline-flex space-x-[8px] items-center font-display"
 			)}>
 			<Badge
 				left={true}
