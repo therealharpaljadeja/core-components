@@ -43,7 +43,7 @@ module.exports = {
 			error: {
 				25: "#FFFBFA",
 				50: "#FEF3F2",
-				100: "#FEF3F2",
+				100: "#FEE4E2",
 				200: "#FECDCA",
 				300: "#FDA29B",
 				400: "#F97066",
