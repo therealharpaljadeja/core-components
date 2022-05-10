@@ -2,6 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 export enum SpinnerSize {
+	sm = "sm",
 	md = "md",
 	lg = "lg",
 	xl = "xl",
@@ -19,6 +20,7 @@ const Spinner = ({
 		<div
 			className={clsx(
 				{
+					"h-8 w-8 border-4": size === SpinnerSize.sm,
 					"h-11 w-11 border-8": size === SpinnerSize.md,
 					"h-12 w-12 border-8": size === SpinnerSize.lg,
 					"h-14 w-14 border-[10px]": size === SpinnerSize.xl,
@@ -32,6 +34,8 @@ const Spinner = ({
 				viewBox='0 0 100 100'
 				className={clsx(
 					{
+						"h-8 w-8 left-[-4px] top-[-4px]":
+							size === SpinnerSize.sm,
 						"h-11 w-11 left-[-8px] top-[-8px]":
 							size === SpinnerSize.md,
 						"h-12 w-12 left-[-8px] top-[-8px]":
@@ -39,12 +43,13 @@ const Spinner = ({
 						"h-14 w-14 left-[-10px] top-[-10px]":
 							size === SpinnerSize.xl,
 					},
-					"absolute box-border "
+					"absolute box-border"
 				)}>
 				<circle
 					className={clsx(
 						"stroke-primary-600",
-						"stroke-[12] origin-center animate-spin-fast"
+						"stroke-[12] origin-center animate-spin-fast",
+						{ "stroke-[8]": size === SpinnerSize.sm }
 					)}
 					cx='50'
 					cy='50'
@@ -52,6 +57,7 @@ const Spinner = ({
 						"41":
 							size === SpinnerSize.md || size === SpinnerSize.xl,
 						"42": size === SpinnerSize.lg,
+						"44": size === SpinnerSize.sm,
 					})}
 					strokeDashoffset='-1000px'
 					strokeDasharray='70 400'
