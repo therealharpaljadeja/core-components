@@ -17,9 +17,9 @@ export enum ButtonSize {
     xxl = "xxl",
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     label: string;
-    size: ButtonSize;
+    size?: ButtonSize;
     className?: string;
     loading?: boolean;
     variant?: ButtonVariant;
