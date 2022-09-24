@@ -18,7 +18,7 @@ export enum BadgeVariant {
 interface BadgeProps {
     className?: string;
     variant?: BadgeVariant;
-    label: string;
+    label?: string;
     size?: BadgeSize;
     leftIcon?: ReactNode;
     rightIcon?: ReactNode;
@@ -27,7 +27,7 @@ interface BadgeProps {
 
 const Badge = ({
     variant = BadgeVariant.Primary,
-    label = "Label",
+    label = "Badge",
     size = BadgeSize.md,
     leftIcon,
     rightIcon,
