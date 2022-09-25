@@ -1,14 +1,20 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Spinner from "./Spinner";
+import Spinner, { SpinnerSize } from "./Spinner";
 
 export default {
-	title: "Spinner",
-	component: Spinner,
+    title: "Components/Spinner",
+    component: Spinner,
 } as ComponentMeta<typeof Spinner>;
 
 const Template: ComponentStory<typeof Spinner> = (args) => (
-	<Spinner {...args} />
+    <Spinner {...args} />
 );
 
-export const Spin = Template.bind({});
-Spin.args = {};
+export const Sizes = () => (
+    <div className="flex space-x-4">
+        <Spinner size={SpinnerSize.sm} />
+        <Spinner size={SpinnerSize.md} />
+        <Spinner size={SpinnerSize.lg} />
+        <Spinner size={SpinnerSize.xl} />
+    </div>
+);
