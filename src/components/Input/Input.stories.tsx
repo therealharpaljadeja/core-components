@@ -4,7 +4,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { TypePredicateKind } from "typescript";
 
 export default {
-    title: "Input",
+    title: "Components/Input",
     component: Input,
 } as ComponentMeta<typeof Input>;
 
