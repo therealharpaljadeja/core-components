@@ -2,16 +2,22 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import FileInput from "./FileInput";
 
 export default {
-	title: "FileInput",
-	component: FileInput,
+    title: "Components/FileInput",
+    component: FileInput,
 } as ComponentMeta<typeof FileInput>;
 
 const Template: ComponentStory<typeof FileInput> = (args) => (
-	<FileInput {...args} />
+    <FileInput {...args} />
 );
 
-export const SimpleFileInput = Template.bind({});
-SimpleFileInput.args = {
-	id: "imageFile",
-	disabled: true,
+export const Playground = Template.bind({});
+Playground.args = {
+    id: "imageFile",
+    disabled: false,
+};
+
+export const disabledState = Template.bind({});
+disabledState.args = {
+    id: "imageFile",
+    disabled: true,
 };
