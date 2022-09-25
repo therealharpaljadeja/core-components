@@ -28,7 +28,7 @@ const Input = ({
             )}
             <div className="flex w-full">
                 {prefix && (
-                    <span className="rounded-l-lg bg-gray-300 inline-flex items-center px-3 font-inter text-gray-600">
+                    <span className="rounded-l-lg border-gray-300 border-2 border-r-0 bg-base-white inline-flex items-center px-3 font-inter text-gray-600">
                         {prefix}
                     </span>
                 )}
