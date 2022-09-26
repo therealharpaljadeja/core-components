@@ -5,7 +5,6 @@ import { AiOutlineComment } from "react-icons/ai";
 export default {
     title: "Components/Button",
     component: Button,
-    decorators: [(Story) => <Story />],
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
