@@ -18,7 +18,7 @@ export enum ButtonSize {
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    label: string;
+    label?: string;
     size?: ButtonSize;
     className?: string;
     loading?: boolean;
@@ -122,7 +122,7 @@ const Button = ({
             ) : (
                 <>
                     {leftIcon}
-                    <div>{label}</div>
+                    {label && <div>{label}</div>}
                     {rightIcon}
                 </>
             )}
