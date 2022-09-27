@@ -52,7 +52,7 @@ const Alert = ({
                     variant={ButtonVariant.Link}
                     leftIcon={<AiOutlineClose />}
                     className={clsx(
-                        "order-2 md:order-last justify-end self-start !px-0 !py-0",
+                        "order-2 md:order-last ml-auto justify-end self-start !px-0 !py-0",
                         {
                             "text-gray-500": variant === AlertVariants.Tertiary,
                             "text-primary-500":
