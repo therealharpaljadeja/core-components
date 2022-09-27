@@ -11,7 +11,7 @@ const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />;
 
 const AlertContent = () => {
     return (
-        <div className="flex flex-col text-gray">
+        <div className="flex flex-col">
             <h2 className="text-sm font-semibold">
                 We just released a new feature
             </h2>
