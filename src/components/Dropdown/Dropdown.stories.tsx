@@ -11,7 +11,6 @@ import {
     AiOutlineUser,
 } from "react-icons/ai";
 import { Transition } from "@headlessui/react";
-import { Fragment } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
 export default {
@@ -108,73 +107,65 @@ export const ImageButtonDropdown = () => {
                         <img src="https://bit.ly/dan-abramov" />
                     </div>
                 </DropdownButton>
-                <Transition
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform translate-x-0 opacity-0 scale-95"
-                    enterTo="transform opacity-100 origin-top-left scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 origin-top-left scale-95"
-                >
-                    <DropdownItems className="max-h-64 overflow-y-scroll">
-                        <div>
-                            <DropdownItem className="border-b-[1px] border-gray-200">
-                                <div className="flex space-x-4">
-                                    <img
-                                        className="h-[40px] w-[40px] rounded-full"
-                                        src="https://bit.ly/dan-abramov"
-                                    />
-                                    <div className="flex flex-col">
-                                        <span className="font-semibold">
-                                            Dan Abramov
-                                        </span>
-                                        <span>olivia@untitledui.com</span>
-                                    </div>
-                                </div>
-                            </DropdownItem>
-                        </div>
-                        <DropdownItem>
-                            <div className="flex items-center">
-                                <AiOutlineUser />
-                                <span className="ml-2">Profile</span>
-                            </div>
-                        </DropdownItem>
-                        <div className="border-y-[1px] border-gray-200">
-                            <DropdownItem disabled={true}>Team</DropdownItem>
-                            <DropdownItem>
-                                <div className="flex items-center">
-                                    <AiOutlineSetting />
-                                    <span className="ml-2">Settings</span>
-                                </div>
-                            </DropdownItem>
-                        </div>
-                        <DropdownItem>
-                            <div className="flex items-center">
-                                <AiOutlineTeam />
-                                <span className="ml-2">Invite Collegues</span>
-                            </div>
-                        </DropdownItem>
-                        <DropdownItem>
-                            <div className="flex items-center">
-                                <AiOutlinePhone />
-                                <span className="ml-2">Support</span>
-                            </div>
-                        </DropdownItem>
 
-                        <DropdownItem>
-                            <div className="flex items-center">
-                                <AiOutlinePhone />
-                                <span className="ml-2">Support</span>
+                <DropdownItems className="max-h-64 overflow-y-scroll">
+                    <div>
+                        <DropdownItem className="border-b-[1px] border-gray-200">
+                            <div className="flex space-x-4">
+                                <img
+                                    className="h-[40px] w-[40px] rounded-full"
+                                    src="https://bit.ly/dan-abramov"
+                                />
+                                <div className="flex flex-col">
+                                    <span className="font-semibold">
+                                        Dan Abramov
+                                    </span>
+                                    <span>olivia@untitledui.com</span>
+                                </div>
                             </div>
                         </DropdownItem>
+                    </div>
+                    <DropdownItem>
+                        <div className="flex items-center">
+                            <AiOutlineUser />
+                            <span className="ml-2">Profile</span>
+                        </div>
+                    </DropdownItem>
+                    <div className="border-y-[1px] border-gray-200">
+                        <DropdownItem disabled={true}>Team</DropdownItem>
                         <DropdownItem>
                             <div className="flex items-center">
-                                <AiOutlinePhone />
-                                <span className="ml-2">Support</span>
+                                <AiOutlineSetting />
+                                <span className="ml-2">Settings</span>
                             </div>
                         </DropdownItem>
-                    </DropdownItems>
-                </Transition>
+                    </div>
+                    <DropdownItem>
+                        <div className="flex items-center">
+                            <AiOutlineTeam />
+                            <span className="ml-2">Invite Collegues</span>
+                        </div>
+                    </DropdownItem>
+                    <DropdownItem>
+                        <div className="flex items-center">
+                            <AiOutlinePhone />
+                            <span className="ml-2">Support</span>
+                        </div>
+                    </DropdownItem>
+
+                    <DropdownItem>
+                        <div className="flex items-center">
+                            <AiOutlinePhone />
+                            <span className="ml-2">Support</span>
+                        </div>
+                    </DropdownItem>
+                    <DropdownItem>
+                        <div className="flex items-center">
+                            <AiOutlinePhone />
+                            <span className="ml-2">Support</span>
+                        </div>
+                    </DropdownItem>
+                </DropdownItems>
             </Dropdown>
         </div>
     );
