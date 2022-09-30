@@ -120,11 +120,11 @@ const Button = ({
             {loading ? (
                 <span>Loading...</span>
             ) : (
-                <>
+                <div className="flex items-center justify-between w-full">
                     {leftIcon}
                     {label && <div>{label}</div>}
                     {rightIcon}
-                </>
+                </div>
             )}
         </button>
     );
