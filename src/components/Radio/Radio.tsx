@@ -7,9 +7,10 @@ interface RadioProps {
     values: ({ [key: string]: string } & { name: string })[];
     label: string;
     name: string;
+    disabled: boolean;
 }
 
-const Radio = ({ values, label, name }: RadioProps) => {
+const Radio = ({ values, label, name, disabled }: RadioProps) => {
     const [selected, setSelected] = useState(values[0]);
 
     return (
@@ -18,20 +19,28 @@ const Radio = ({ values, label, name }: RadioProps) => {
             value={selected}
             onChange={setSelected}
             name={name}
+            disabled={disabled}
         >
             <RadioGroup.Label>{label}</RadioGroup.Label>
             <div className="flex flex-col space-y-2">
                 {values.map((value) => (
                     <RadioGroup.Option
-                        className={({ checked }) =>
+                        className={({ disabled, checked }) =>
                             clsx(
                                 {
-                                    "hover:border-primary-300 focus:border-primary-300 focus:shadow-primary-100 focus:shadow-md outline-none border-[1px] border-gray-200 ":
+                                    " outline-none border-[1px] border-gray-200 ":
                                         !checked,
+                                },
+                                {
+                                    "hover:border-primary-300 focus:border-primary-300 focus:shadow-primary-100 focus:shadow-md":
+                                        !checked && !disabled,
                                 },
                                 {
                                     "border-2 border-primary-600 bg-primary-50":
                                         checked,
+                                },
+                                {
+                                    "bg-gray-50": disabled,
                                 },
                                 "group rounded-xl p-4"
                             )
@@ -45,7 +54,12 @@ const Radio = ({ values, label, name }: RadioProps) => {
                                     {checked ? (
                                         <MdRadioButtonChecked className="fill-primary-700" />
                                     ) : (
-                                        <MdRadioButtonUnchecked className="group-hover:fill-primary-600" />
+                                        <MdRadioButtonUnchecked
+                                            className={clsx({
+                                                "group-hover:fill-primary-600":
+                                                    !checked && !disabled,
+                                            })}
+                                        />
                                     )}
                                 </div>
                                 <div className="flex flex-1  flex-col space-y-2">
@@ -59,9 +73,12 @@ const Radio = ({ values, label, name }: RadioProps) => {
                                         {value.name}
                                     </RadioGroup.Label>
                                     <RadioGroup.Description
-                                        className={clsx({
-                                            "text-primary-700": checked,
-                                        })}
+                                        className={clsx(
+                                            {
+                                                "text-primary-700": checked,
+                                            },
+                                            "text-gray-600"
+                                        )}
                                         as="span"
                                     >
                                         {value.description}

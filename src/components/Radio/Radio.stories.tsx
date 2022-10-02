@@ -28,4 +28,5 @@ Playground.args = {
     values,
     label: "CPU Plans",
     name: "cpu-plan",
+    disabled: true,
 };
