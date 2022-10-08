@@ -116,6 +116,7 @@ const Button = ({
                 className
             )}
             disabled={disabled}
+            {...props}
         >
             {loading ? (
                 <span>Loading...</span>
