@@ -1,4 +1,4 @@
-<center>core-components</center>
+<center>core-components</center><br>
 <center><i>Reusable components for personal projects</i></center>
 
 ### Component
