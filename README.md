@@ -55,3 +55,24 @@
     current={5}
 />
 ```
+
+### RadioGroup
+
+```ts
+const values = [
+    {
+        name: "Basic Plan $10/month",
+        value: "basic-plan",
+        description:
+            "Includes up to 10 users, 20GB individual data and access to all features.",
+    },
+    {
+        name: "Business Plan $50/month",
+        value: "business-plan",
+        description:
+            "Includes up to 50 users, 512GB individual data and access to all features.",
+    },
+];
+
+<Radio values-{values} label="CPU Plans" name="cpu-plan" disabled={true} />
+```
