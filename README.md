@@ -74,5 +74,5 @@ const values = [
     },
 ];
 
-<Radio values-{values} label="CPU Plans" name="cpu-plan" disabled={true} />
+<Radio values={values} label="CPU Plans" name="cpu-plan" disabled={true} />;
 ```
