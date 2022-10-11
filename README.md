@@ -56,7 +56,20 @@
 />
 ```
 
-### RadioGroup
+#### Input
+
+```ts
+<Input
+    label="Email"
+    disabled={false}
+    leftIcon={<AiOutlineMail />}
+    error={false}
+    hint="This is a hint"
+    errorMessage="This is an error message"
+/>
+```
+
+#### RadioGroup
 
 ```ts
 const values = [
