@@ -19,6 +19,7 @@ const Input = ({
     placeholder = "placeholder",
     type = "text",
     prefix,
+    id,
     ...props
 }: InputProps): React.ReactElement => {
     return (
