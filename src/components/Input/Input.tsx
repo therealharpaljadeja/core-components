@@ -22,7 +22,7 @@ const Input = ({
     ...props
 }: InputProps): React.ReactElement => {
     return (
-        <label className="w-full">
+        <label className="w-full" htmlFor={id}>
             {label && (
                 <div className="text-gray-700 mb-[6px] font-inter">{label}</div>
             )}
@@ -52,6 +52,10 @@ const Input = ({
                         })}
                         type={type}
                         placeholder={placeholder}
+                        name={id}
+                        id={id}
+                        onChange={props.onChange}
+                        onBlur={props.onBlur}
                         {...props}
                     />
                     {leftIcon && (
