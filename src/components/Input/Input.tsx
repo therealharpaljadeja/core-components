@@ -52,10 +52,6 @@ const Input = ({
                         })}
                         type={type}
                         placeholder={placeholder}
-                        name={id}
-                        id={id}
-                        onChange={props.onChange}
-                        onBlur={props.onBlur}
                         {...props}
                     />
                     {leftIcon && (
